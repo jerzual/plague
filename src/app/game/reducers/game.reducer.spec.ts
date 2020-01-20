@@ -10,4 +10,7 @@ describe('Game Reducer', () => {
       expect(result).toBe(initialState);
     });
   });
+  describe('Selectors', () => {
+
+  });
 });

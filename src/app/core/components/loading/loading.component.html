@@ -1,4 +1,9 @@
-<div class="loader">
+<div
+    class="loader"
+    *ngIf="shown"
+    [@loadingAnimation]="loading"
+    (@loadingAnimation.done)="handleAnimationEnd()"
+>
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>

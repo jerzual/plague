@@ -1,4 +1,5 @@
 {
+    "$schema": "../sprites-schema.json",
     "frames": {
         "_colors.png": {
             "frame": {

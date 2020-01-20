@@ -1,5 +1,7 @@
-
-import { UserInterfaceActions, UserInterfaceActionTypes } from '../actions/user-interface.actions';
+import {
+  UserInterfaceActions,
+  UserInterfaceActionTypes,
+} from '../actions/user-interface.actions';
 
 export const userInterfaceFeatureKey = 'userInterface';
 
@@ -17,10 +19,17 @@ export const initialState: State = {
   height: 480,
 };
 
-export function reducer(state = initialState, action: UserInterfaceActions): State {
+export function reducer(
+  state = initialState,
+  action: UserInterfaceActions,
+): State {
   switch (action.type) {
     case UserInterfaceActionTypes.Resize:
-      return state;
+      return {
+        ...state,
+        width: action.payload.width,
+        height: action.payload.height,
+      };
 
     default:
       return state;

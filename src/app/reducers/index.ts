@@ -11,6 +11,7 @@ import * as fromAdmin from '../admin/reducers/admin.reducer';
 import * as fromGame from '../game/reducers/game.reducer';
 import * as fromConfig from '../core/reducers/config.reducer';
 import { InjectionToken } from '@angular/core';
+import * as fromDatabase from '../database/reducers/database.reducer';
 
 export interface State {
 
@@ -18,6 +19,7 @@ export interface State {
   [fromAdmin.adminFeatureKey]: fromAdmin.State;
   [fromGame.gameFeatureKey]: fromGame.State;
   [fromConfig.configFeatureKey]: fromConfig.State;
+  [fromDatabase.databaseFeatureKey]: fromDatabase.State;
 }
 
 export const reducers: ActionReducerMap<State> = {
@@ -26,6 +28,7 @@ export const reducers: ActionReducerMap<State> = {
   [fromAdmin.adminFeatureKey]: fromAdmin.reducer,
   [fromGame.gameFeatureKey]: fromGame.reducer,
   [fromConfig.configFeatureKey]: fromConfig.reducer,
+  [fromDatabase.databaseFeatureKey]: fromDatabase.reducer,
 };
 export const REDUCERS_TOKEN = new InjectionToken<ActionReducerMap<State>>('App Reducers');
 

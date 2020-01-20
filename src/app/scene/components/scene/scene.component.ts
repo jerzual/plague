@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 import {Engine, Scene, FreeCamera, Light,
   Vector3, HemisphericLight, MeshBuilder
@@ -10,14 +10,14 @@ import { EngineService } from '../../services/engine.service';
   templateUrl: './scene.component.html',
   styleUrls: ['./scene.component.css']
 })
-export class SceneComponent implements OnInit {
+export class SceneComponent implements  AfterViewInit {
 
   @ViewChild('renderZone', { static: true })
   public renderZone: ElementRef<HTMLCanvasElement>;
 
   constructor(private engServ: EngineService) { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.engServ.createScene(this.renderZone);
     this.engServ.animate();
   }

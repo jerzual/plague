@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GamesListComponent } from './games-list.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { GameItemComponent } from '../../components/game-item/game-item.component';
 
 describe('GamesListComponent', () => {
   let component: GamesListComponent;
@@ -8,7 +10,8 @@ describe('GamesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GamesListComponent ]
+      declarations: [ GamesListComponent, GameItemComponent ],
+      imports: [NoopAnimationsModule],
     })
     .compileComponents();
   }));

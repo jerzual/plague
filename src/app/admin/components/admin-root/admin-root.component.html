@@ -1,1 +1,26 @@
-<p>admin-root works!</p>
+<form>
+    <label for="truc">
+        <input
+            [(ngModel)]="binding"
+            name="truc"
+            id="truc"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+        />
+    </label>
+</form>
+<nav class="admin-tabs">
+    <a
+        [routerLink]="['/players']"
+        routerLinkActive="router-link-active"
+        i18n
+    >Players</a>
+    <a
+        [routerLink]="['/worlds']"
+        routerLinkActive="router-link-active"
+        i18n
+    > Worlds</a>
+</nav>
+<router-outlet></router-outlet>

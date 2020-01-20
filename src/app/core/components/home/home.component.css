@@ -1,14 +1,31 @@
-:root{
-    --main-color: #7ab793;
+:root {
+  --main-color: #7ab793;
 }
-.home-title{
+.home-title {
+  color: #7ab793;
+  text-transform: uppercase;
+  font-weight: bold;
 
-    color: #7ab793;
-    text-transform: uppercase;
-    font-weight: bold;
+  margin: 0;
+  line-height: 40px;
+  padding: 0;
+  background: black;
+  display: inline-block;
+  position:relative;
 }
+.home-title::after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-color: black transparent transparent black;
+  border-width: 20px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
 .home-menu {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 .menu-item {
@@ -16,8 +33,8 @@
 }
 
 .menu-item-link {
-    color: var(--main-color);
-    transition: .3s ease-in-out color;
+  color: var(--main-color);
+  transition: 0.3s ease-in-out color;
 }
 
 .menu-item-link:hover,

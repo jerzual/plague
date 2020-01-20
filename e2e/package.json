@@ -4,7 +4,7 @@
   "description": "",
   "main": "protractor.conf.js",
   "scripts": {
-    "start": "artillery run ",
+    "start": "artillery run src/scenario/viewer.yml",
     "test": "protractor"
   },
   "author": "",

@@ -32,14 +32,14 @@ describe('AppComponent', () => {
 
   it('should render loading component if loading is true', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.componentInstance.loading = true;
+    fixture.componentInstance.isLoading = true;
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('app-loading')).toBeDefined();
   });
   it('should not render loading component if loading is false', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.componentInstance.loading = false;
+    fixture.componentInstance.isLoading = false;
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('app-loading')).toBeNull();

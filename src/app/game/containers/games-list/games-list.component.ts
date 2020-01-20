@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamesListComponent implements OnInit {
 
+  public games: any[];
+
   constructor() { }
 
   ngOnInit() {

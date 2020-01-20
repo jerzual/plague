@@ -9,7 +9,7 @@ export enum UserInterfaceActionTypes {
 
 export class Resize implements Action {
   readonly type = UserInterfaceActionTypes.Resize;
+  constructor(public payload: { width: number; height: number }) {}
 }
-
 
 export type UserInterfaceActions = Resize;

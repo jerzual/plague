@@ -8,11 +8,13 @@ import { StoreModule } from '@ngrx/store';
 import * as fromConfig from './reducers/config.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { ConfigEffects } from './effects/config.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [LoadingComponent, NotFoundComponent, HomeComponent],
   imports: [
     CommonModule,
+    BrowserAnimationsModule,
     RouterModule,
     StoreModule.forFeature(fromConfig.configFeatureKey, fromConfig.reducer),
     EffectsModule.forFeature([ConfigEffects]),

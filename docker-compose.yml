@@ -43,11 +43,11 @@ services:
       - AZIMUT_COUCHDB_HOST
       - AZIMUT_FRONT_URL
 
-  e2e:
+  tests:
     image: node:12
     build:
       context: ./e2e
-    command: npm ci
+    command: npm e2e
     volumes:
       - ./e2e:/usr/src/app
 

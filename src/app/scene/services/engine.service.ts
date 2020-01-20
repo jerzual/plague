@@ -13,6 +13,9 @@ import {
   StandardMaterial,
   Color3,
   HemisphericLight,
+  FollowCamera,
+  PointLight,
+  ShadowGenerator,
 } from 'babylonjs';
 import 'babylonjs-materials';
 
@@ -62,7 +65,28 @@ export class EngineService {
       new Vector3(0, 1, 0),
       this.scene,
     );
+/*
+    // Lights
+    const torch = new PointLight('light1', Vector3.Zero(), this.scene);
+    torch.intensity = 0.7;
+    torch.diffuse = BABYLON.Color3.FromHexString('#ff9944');
 
+    const sky = new HemisphericLight('sky', new Vector3(0, 1.0, 0), this.scene);
+    sky.intensity = 0.5;
+
+    // Shadow
+    const shadowGenerator = new ShadowGenerator(1024, torch);
+    shadowGenerator.setDarkness(0.2);
+    shadowGenerator.useBlurExponentialShadowMap = true;
+    shadowGenerator.blurBoxOffset = 1.0;
+    shadowGenerator.blurScale = 20.0;
+
+    const ground = Mesh.CreatePlane('g', 120, this.scene);
+    ground.position = new Vector3(0, 0, 0);
+    ground.rotation.x = Math.PI / 2;
+    ground.receiveShadows = true;
+    ground.checkCollisions = true;
+*/
     // create a built-in "sphere" shape; its constructor takes 4 params: name, subdivisions, radius, scene
     this.sphere = Mesh.CreateSphere('sphere1', 16, 2, this.scene);
 

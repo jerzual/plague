@@ -1,0 +1,5 @@
+.azimut-overlay {
+  background-color: black;
+  pointer-events: all;
+  position: fixed;
+}
