@@ -33,7 +33,7 @@
   "dependencies": {
     "@angular/animations": "~9.1.8",
     "@angular/cdk": "^9.2.4",
-    "@angular/common": "~10.0.0-next.9",
+    "@angular/common": "^9.0.0",
     "@angular/compiler": "~9.1.8",
     "@angular/core": "~9.1.8",
     "@angular/forms": "~9.1.8",
@@ -53,7 +53,7 @@
     "@nguniversal/common": "^9.1.1",
     "@nguniversal/express-engine": "^9.1.1",
     "@tonaljs/tonal": "^3.2.2",
-    "angular-audio-context": "^24.0.8",
+    "angular-audio-context": "^28.0.18",
     "angular2-draggable": "^2.3.2",
     "babylon-navigation-mesh": "^1.2.6",
     "babylonjs": "^4.0.3",
