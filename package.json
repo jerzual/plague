@@ -67,6 +67,7 @@
     "pouchdb-adapter-http": "^7.1.1",
     "pouchdb-adapter-idb": "^7.1.1",
     "pouchdb-adapter-memory": "^7.1.1",
+    "reflect-metadata": "^0.1.13",
     "rot-js": "^2.1.1",
     "rxdb": "^8.7.2",
     "rxjs": "~6.5.5",
