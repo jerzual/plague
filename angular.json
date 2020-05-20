@@ -97,7 +97,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
@@ -122,6 +122,32 @@
             "production": {
               "devServerTarget": "azimut:serve:production"
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "azimut:build",
+            "serverTarget": "azimut:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "azimut:build:production",
+              "serverTarget": "azimut:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "azimut:build:production",
+            "serverTarget": "azimut:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
